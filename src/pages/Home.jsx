@@ -3,6 +3,7 @@ import { Hero, Navbar, Info, Collections, CarrouselProducts, Follow } from '../c
 
 export const Home = () => {
   return (
+
     <div>Bienvidos al Home
 
       <Navbar/>
@@ -14,5 +15,8 @@ export const Home = () => {
       
 
     </div>
+
+   
+
   )
 }
