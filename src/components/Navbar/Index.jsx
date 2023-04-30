@@ -1,21 +1,43 @@
+import { useState } from "react";
 import { FaUser } from "react-icons/fa";
-import { IoCartOutline } from "react-icons/io5";
+import { IoCartOutline, IoMenuOutline, IoClose } from "react-icons/io5";
 
 export const Navbar = () => {
+  const Links = [
+    { name: "HOME", link: "/" },
+    { name: "SHOP", link: "/" },
+    { name: "PRODUCT", link: "/" },
+    { name: "PAGES", link: "/" },
+  ];
+
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      <header className="bg-colorPrimary w-full h-20 justify-center  ">
-        <div className="flex justify-between items-center px-16 max-w-7xl h-20 m-auto ">
+      <header className="bg-colorPrimary w-full top-0 fixed left-0">
+        <div className="flex justify-between items-center py-6 px-16 max-w-7xl h-20 m-auto">
           <span className="text-2xl">DUROTAN</span>
-          <div className="flex">
-            <ul className="flex gap-4 lg:gap-8 ">
-              <li className="text-xs">HOME</li>
-              <li className="text-xs">SHOP</li>
-              <li className="text-xs">PRODUCT</li>
-              <li className="text-xs">BLOG</li>
-              <li className="text-xs">PAGES</li>
-            </ul>
+          <div
+            onClick={() => setOpen(!open)}
+            className="absolute right-8 cursor-pointer md:hidden"
+          >
+            {open ? <IoClose /> : <IoMenuOutline />}
           </div>
+
+          <ul
+            className={`md:flex md:items-center absolute md:static top-14 bg-colorPrimary mt-6 md:mt-0 w-full md:w-auto left-0 transition-all duration-500 ease-in ${
+              open ? "top-20 " : "top-[-490px]"
+            } `}
+          >
+            {Links.map((link) => {
+              return (
+                <li key={link.name} className="ml-8 md:my-0 my-7">
+                  <a href={link.link}>{link.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+
           <div className="flex items-center gap-11 ">
             <div className="flex gap-4">
               <p>EN</p>
