@@ -5,17 +5,20 @@ import {
   Collections,
   CarrouselProducts,
   Follow,
-} from "../components";
+
+} from "../components"
 
 export const Home = () => {
   return (
-    <>
-      <Navbar />
+    <div className=" w-full flex justify-center bg-[#ECECEC] min-h-screen">
+      {/* <Navbar/> */}
       <Hero />
-      <Info />
-      <Collections />
-      <CarrouselProducts />
-      <Follow />
-    </>
-  );
-};
+      {/* <Info/>
+      <Collections/>
+      <CarrouselProducts/>
+      <Follow/>
+       */}
+    </div>
+  )
+}
+

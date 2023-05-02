@@ -6,8 +6,11 @@ export default {
       colors: {
         colorPrimary: "#EBECEB",
         buttonsAndTags: "#938556",
+        },
+      fontFamily: {
+        marcellus: "Marcellus-Regular",
+        firmebook: 'firme-book'
       },
-    },
   },
   plugins: [],
 };
