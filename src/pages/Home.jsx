@@ -5,7 +5,7 @@ import {
   Collections,
   CarrouselProducts,
   Follow,
-} from "../components";
+} from "../components"
 
 export const Home = () => {
   return (
@@ -18,5 +18,5 @@ export const Home = () => {
       <Follow/>
        */}
     </div>
-  );
-};
+  )
+}
