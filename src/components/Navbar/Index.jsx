@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { FaUser } from "react-icons/fa";
-import { IoCartOutline, IoMenuOutline, IoClose } from "react-icons/io5";
-import "./Navbar.css";
+import { useState } from 'react'
+import { FaUser } from 'react-icons/fa'
+import { IoCartOutline, IoMenuOutline, IoClose } from 'react-icons/io5'
+import './Navbar.css'
 export const Navbar = () => {
   const Links = [
-    { name: "HOME", link: "/" },
-    { name: "SHOP", link: "/" },
-    { name: "PRODUCT", link: "/" },
-    { name: "PAGES", link: "/" },
-  ];
+    { name: 'HOME', link: '/' },
+    { name: 'SHOP', link: '/' },
+    { name: 'PRODUCT', link: '/' },
+    { name: 'PAGES', link: '/' }
+  ]
 
-  const [open, setOpen] = useState(false);
-  console.log(Links[0].name);
+  const [open, setOpen] = useState(false)
+  console.log(Links[0].name)
   return (
     <>
-      <header className="bg-colorPrimary w-full top-0 fixed left-0">
+      <header className="bg-colorPrimary w-full top-0 fixed left-0 h-20 z-10">
         <div className="flex justify-between items-center py-6 px-16 max-w-7xl h-20 m-auto container-navbar">
           <span className="text-2xl">DUROTAN</span>
           <div
@@ -26,7 +26,7 @@ export const Navbar = () => {
 
           <ul
             className={`md:flex md:items-center absolute md:static top-14 bg-colorPrimary  md:mt-0 w-full md:w-auto left-0 transition-all duration-500 ease-in ${
-              open ? "top-20 " : "top-[-490px]"
+              open ? 'top-20 ' : 'top-[-490px]'
             } `}
           >
             {Links.map((link, i) => {
@@ -34,14 +34,14 @@ export const Navbar = () => {
                 <li key={link.name} className="ml-8 md:my-0 my-7">
                   <a
                     className={`cursor-pointer hover:text-buttonsAndTags ${
-                      i === 0 ? "text-buttonsAndTags" : ""
+                      i === 0 ? 'text-buttonsAndTags' : ''
                     }`}
                     href={link.link}
                   >
                     {link.name}
                   </a>
                 </li>
-              );
+              )
             })}
           </ul>
 
@@ -68,5 +68,5 @@ export const Navbar = () => {
         </div>
       </header>
     </>
-  );
-};
+  )
+}

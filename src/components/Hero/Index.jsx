@@ -30,7 +30,7 @@ export const Hero = () => {
   }
 
   return (
-    <section className='relative w-[94%] lg:w-[94%] xl:w-[90%] pb-5 xl:h-[620px]'>
+    <section className='relative w-[94%] lg:w-[94%] xl:w-[90%] pb-5 xl:h-[620px] mt-[80px]'>
       <div className='flex flex-col lg:flex-row gap-3 lg:gap-8 pb-10 max-w-6xl mx-auto'>
         <div className='flex flex-col justify-between'>
           <div className=' hidden w-full lg:flex  lg:flex-col mt-20 '>
