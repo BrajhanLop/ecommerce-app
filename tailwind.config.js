@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         colorPrimary: "#EBECEB",
+        buttonsAndTags: "#938556",
       },
     },
   },

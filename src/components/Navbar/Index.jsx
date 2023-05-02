@@ -11,7 +11,7 @@ export const Navbar = () => {
   ];
 
   const [open, setOpen] = useState(false);
-
+  console.log(Links[0].name);
   return (
     <>
       <header className="bg-colorPrimary w-full top-0 fixed left-0">
@@ -29,10 +29,17 @@ export const Navbar = () => {
               open ? "top-20 " : "top-[-490px]"
             } `}
           >
-            {Links.map((link) => {
+            {Links.map((link, i) => {
               return (
                 <li key={link.name} className="ml-8 md:my-0 my-7">
-                  <a href={link.link}>{link.name}</a>
+                  <a
+                    className={`cursor-pointer hover:text-buttonsAndTags ${
+                      i === 0 ? "text-buttonsAndTags" : ""
+                    }`}
+                    href={link.link}
+                  >
+                    {link.name}
+                  </a>
                 </li>
               );
             })}
@@ -53,6 +60,11 @@ export const Navbar = () => {
               </span>
             </div>
           </div>
+        </div>
+
+        <div className="px-16 max-w-7xl flex m-auto relative ">
+          <span className="barra w-full  h-0.5"></span>
+          <div className="circulo absolute bg-buttonsAndTags "></div>
         </div>
       </header>
     </>
