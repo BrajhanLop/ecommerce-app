@@ -5,6 +5,7 @@ import {
   Collections,
   CarrouselProducts,
   Follow,
+
 } from "../components"
 
 export const Home = () => {
@@ -20,3 +21,4 @@ export const Home = () => {
     </div>
   )
 }
+
